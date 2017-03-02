@@ -1,7 +1,7 @@
 # Site settings
-title:
-email:
-author:
+title: Back Alley Bikes
+email: shop@backalleybikes.net
+author: Alex Bloom
 description:
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "" # the base hostname & protocol for your site

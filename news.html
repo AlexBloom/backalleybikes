@@ -1,4 +1,25 @@
 ---
 layout: default
-title: Title
+title: News
+permalink: /news/
 ---
+
+<header class="max-width-l mx-auto text-center">
+  <h1>Seek the Great Unknowns</h1>
+</header>
+
+{% for post in site.posts %}
+  <article class="max-width-l mx-auto py-l mb-l border-bottom-thin">
+    <header class="">
+      <h2 class="title"><a href="{{ post.url }}/" class="js-pjax">{{ post.title }}</a></h2>
+      <p class="date">{{ post.date | date: "%b %d, %Y" }}</p>
+    </header><!--/.article-head-->
+    <div class="article-content">
+      {{ post.long_description }}
+
+      {{ post.content }}
+      <a href="/{{ post.url }}/" class="full-post-link js-pjax">Read more</a>
+    </div><!--/.article-content-->
+  </article>
+  {% if forloop.last %}{% else %}<div class="separater"></div>{% endif %}
+{% endfor %}

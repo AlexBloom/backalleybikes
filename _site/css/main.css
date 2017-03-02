@@ -2288,6 +2288,64 @@ td:first-child {
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
   /* easeInOutExpo */ }
 
+@-webkit-keyframes stairDescend {
+  from {
+    transform: scaleX(0.5) translateY(0%); }
+  to {
+    transform: scaleX(1) translateY(100%); } }
+@keyframes stairDescend {
+  from {
+    transform: scaleX(0.5) translateY(0%); }
+  to {
+    transform: scaleX(1) translateY(100%); } }
+@-webkit-keyframes keystoneDescend {
+  from {
+    transform: scaleX(0.5) translateY(100%); }
+  to {
+    transform: scaleX(1) translateY(100%); } }
+@keyframes keystoneDescend {
+  from {
+    transform: scaleX(0.5) translateY(100%); }
+  to {
+    transform: scaleX(1) translateY(100%); } }
+.stairDescend {
+  animation: stairDescend .75s linear infinite;
+  -webkit-animation: stairDescend .75s linear infinite; }
+
+.keystoneDescend {
+  transform: translateY(100%);
+  animation: keystoneDescend .75s linear infinite;
+  -webkit-animation: keystoneDescend .75s linear infinite; }
+
+@-webkit-keyframes stairAscend {
+  from {
+    transform: scaleX(0.5) translateY(0%); }
+  to {
+    transform: scaleX(1) translateY(-100%); } }
+@keyframes stairAscend {
+  from {
+    transform: scaleX(0.5) translateY(0%); }
+  to {
+    transform: scaleX(1) translateY(-100%); } }
+@-webkit-keyframes keystoneAscend {
+  from {
+    transform: scaleX(0.5) translateY(-100%); }
+  to {
+    transform: scaleX(1) translateY(-100%); } }
+@keyframes keystoneAscend {
+  from {
+    transform: scaleX(0.5) translateY(-100%); }
+  to {
+    transform: scaleX(1) translateY(-100%); } }
+.stairAscend {
+  animation: stairAscend .75s linear infinite;
+  -webkit-animation: stairAscend .75s linear infinite; }
+
+.keystoneAscend {
+  transform: translateY(-300%);
+  animation: keystoneAscend .75s linear infinite;
+  -webkit-animation: keystoneAscend .75s linear infinite; }
+
 /**
  * (optional) define here the style definitions which should be applied on the slider container
  * e.g. width including further controls like arrows etc.
