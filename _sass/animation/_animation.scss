@@ -185,3 +185,41 @@ border-radius:1em;
   animation:keystoneAscend .75s linear infinite;
   -webkit-animation: keystoneAscend .75s linear infinite;
 }
+
+.vhs-flicker {
+  &:hover{
+    opacity: 0;
+    -webkit-animation-name: vhs-flicker;
+            animation-name: vhs-flicker;
+    -webkit-animation-duration: .4s;
+            animation-duration: .4s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: steps(7);
+            animation-timing-function: steps(7);
+  }
+}
+
+@-webkit-keyframes vhs-flicker {
+    0%   { opacity: 0 }
+   12.5% { opacity: .25 }
+   25%   { opacity: 0 }
+   37.5% { opacity: 0 }
+   50%   { opacity: .75 }
+   62.5% { opacity: 0 }
+   75%   { opacity: 1 }
+   87.5% { opacity: .5 }
+  100%   { opacity: 1 }
+}
+
+@keyframes vhs-flicker {
+    0%   { opacity: 0 }
+   12.5% { opacity: .25 }
+   25%   { opacity: 0 }
+   37.5% { opacity: 0 }
+   50%   { opacity: .75 }
+   62.5% { opacity: 0 }
+   75%   { opacity: 1 }
+   87.5% { opacity: .5 }
+  100%   { opacity: 1 }
+}
